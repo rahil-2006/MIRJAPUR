@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mirzapur - Bollywood Web</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: white;
+        }
+
+        /* Header */
+        header {
+            background: #160000;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        header h1 {
+            color: #d4af37;
+            font-size: 45px;
+            letter-spacing: 4px;
+        }
+
+        header p {
+            color: #ddd;
+            margin-top: 8px;
+        }
+
+        /* Navigation */
+        nav {
+            background: #300000;
+            text-align: center;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* Home */
+        #home {
+            min-height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background:
+                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+                url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .home-content h2 {
+            font-size: 60px;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .home-content p {
+            font-size: 20px;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #d4af37;
+            color: #160000;
+            padding: 13px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background: white;
+        }
+
+        /* Common Section */
+        section {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #d4af37;
+            font-size: 35px;
+            margin-bottom: 25px;
+        }
+
+        section p {
+            line-height: 1.7;
+            color: #ddd;
+        }
+
+        /* About */
+        #about {
+            background: #1b1b1b;
+        }
+
+        .about-box {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* Characters */
+        #characters {
+            background: #100000;
+        }
+
+        .characters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .character {
+            width: 220px;
+            background: #241111;
+            padding: 25px;
+            border: 1px solid #d4af37;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .character:hover {
+            transform: translateY(-8px);
+            background: #3a1717;
+        }
+
+        .character h3 {
+            color: #d4af37;
+            margin-bottom: 12px;
+        }
+
+        .character p {
+            font-size: 14px;
+        }
+
+        /* Content */
+        #content {
+            background: #1b1b1b;
+        }
+
+        .content-box {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .content-box h3 {
+            color: #d4af37;
+            margin: 25px 0 10px;
+        }
+
+        /* Contact */
+        #contact {
+            background: #100000;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            background: #222;
+            border: 1px solid #555;
+            color: white;
+            border-radius: 5px;
+        }
+
+        textarea {
+            height: 130px;
+        }
+
+        button {
+            background: #d4af37;
+            color: #160000;
+            border: none;
+            padding: 13px 35px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: white;
+        }
+
+        /* Footer */
+        footer {
+            background: #160000;
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #d4af37;
+        }
+
+        footer p {
+            color: #aaa;
+        }
+
+        /* Mobile */
+        @media(max-width: 700px) {
+
+            header h1 {
+                font-size: 35px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .home-content h2 {
+                font-size: 40px;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>MIRZAPUR</h1>
+        <p>Bollywood Crime Drama Web Experience</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#characters">Characters</a>
+        <a href="#content">Content</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Home Page -->
+    <section id="home">
+        <div class="home-content">
+
+            <h2>MIRZAPUR</h2>
+
+            <p>
+                Welcome to the world of power, crime and rivalry.
+            </p>
+
+            <a href="#about" class="btn">Explore Website</a>
+
+        </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about">
+
+        <h2>About Us</h2>
+
+        <div class="about-box">
+
+            <p>
+                Mirzapur is a popular Indian crime thriller web series.
+                The story is based around power, family, politics,
+                crime and rivalry in Mirzapur.
+            </p>
+
+            <br>
+
+            <p>
+                This website is a fan-style Bollywood themed website
+                created to present information about the series,
+                its characters and its story world.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Characters -->
+    <section id="characters">
+
+        <h2>Popular Characters</h2>
+
+        <div class="characters">
+
+            <div class="character">
+                <h3>Kaleen Bhaiya</h3>
+                <p>
+                    A powerful businessman and central character
+                    connected with the criminal world of Mirzapur.
+                </p>
+            </div>
+
+            <div class="character">
+                <h3>Guddu Pandit</h3>
+                <p>
+                    A major character whose journey is connected
+                    with ambition, revenge and power.
+                </p>
+            </div>
+
+            <div class="character">
+                <h3>Munna Tripathi</h3>
+                <p>
+                    A key character from the Tripathi family
+                    involved in the power struggle.
+                </p>
+            </div>
+
+            <div class="character">
+                <h3>Golu Gupta</h3>
+                <p>
+                    An important character who becomes involved
+                    in the changing world of Mirzapur.
+                </p>
+            </div>
+
+            <div class="character">
+                <h3>Beena Tripathi</h3>
+                <p>
+                    A strong character from the Tripathi family
+                    with an important role in the story.
+                </p>
+            </div>
+
+            <div class="character">
+                <h3>Bablu Pandit</h3>
+                <p>
+                    A significant character connected to Guddu
+                    and the Pandit family.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Content -->
+    <section id="content">
+
+        <h2>Movie / Series Content</h2>
+
+        <div class="content-box">
+
+            <h3>Story</h3>
+
+            <p>
+                The story revolves around the struggle for power
+                in Mirzapur. Different families and groups become
+                involved in conflicts, ambition and revenge.
+            </p>
+
+            <h3>Power</h3>
+
+            <p>
+                Power and control are major themes throughout
+                the story. Characters compete for influence
+                and authority.
+            </p>
+
+            <h3>Family</h3>
+
+            <p>
+                Family relationships play an important role in
+                the decisions and conflicts of the characters.
+            </p>
+
+            <h3>Rivalry</h3>
+
+            <p>
+                Rivalries between different characters and
+                families create many dramatic situations.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2>Contact Us</h2>
+
+        <form>
+
+            <input type="text" placeholder="Enter Your Name" required>
+
+            <input type="email" placeholder="Enter Your Email" required>
+
+            <input type="text" placeholder="Subject">
+
+            <textarea placeholder="Enter Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Mirzapur Fan Website | Bollywood Theme
+        </p>
+
+    </footer>
+
+</body>
+</html>

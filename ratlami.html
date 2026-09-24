@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>મિર્ઝાપુર - બોલીવુડ વેબસાઇટ</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+        }
+
+        /* Header */
+        header {
+            background-color: #160000;
+            padding: 25px;
+            text-align: center;
+            border-bottom: 3px solid #d4af37;
+        }
+
+        header h1 {
+            color: #d4af37;
+            font-size: 50px;
+            letter-spacing: 5px;
+        }
+
+        header p {
+            color: #ddd;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #300000;
+            text-align: center;
+            padding: 18px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        /* Home */
+        #home {
+            min-height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            background:
+            linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+            url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=1600&q=80");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .home-content h2 {
+            font-size: 65px;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .home-content p {
+            font-size: 21px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #160000;
+            padding: 14px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: white;
+        }
+
+        /* Common Section */
+        section {
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #d4af37;
+            font-size: 38px;
+            margin-bottom: 25px;
+        }
+
+        section p {
+            line-height: 1.8;
+            color: #ddd;
+            font-size: 17px;
+        }
+
+        /* About */
+        #about {
+            background-color: #1b1b1b;
+        }
+
+        .about-box {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        /* Characters */
+        #characters {
+            background-color: #100000;
+        }
+
+        .characters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .character {
+            width: 230px;
+            background-color: #241111;
+            padding: 25px;
+            border: 1px solid #d4af37;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .character:hover {
+            transform: translateY(-8px);
+            background-color: #3a1717;
+        }
+
+        .character h3 {
+            color: #d4af37;
+            margin-bottom: 12px;
+        }
+
+        .character p {
+            font-size: 15px;
+        }
+
+        /* Content */
+        #content {
+            background-color: #1b1b1b;
+        }
+
+        .content-box {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .content-box h3 {
+            color: #d4af37;
+            margin: 25px 0 10px;
+            font-size: 25px;
+        }
+
+        /* Contact */
+        #contact {
+            background-color: #100000;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            background-color: #222;
+            border: 1px solid #555;
+            color: white;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 130px;
+        }
+
+        button {
+            background-color: #d4af37;
+            color: #160000;
+            border: none;
+            padding: 14px 35px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #160000;
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #d4af37;
+        }
+
+        footer p {
+            color: #aaa;
+        }
+
+        /* Mobile */
+        @media(max-width: 700px) {
+
+            header h1 {
+                font-size: 38px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+
+            .home-content h2 {
+                font-size: 42px;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>મિર્ઝાપુર</h1>
+        <p>બોલીવુડ ક્રાઇમ ડ્રામાની દુનિયામાં આપનું સ્વાગત છે</p>
+    </header>
+
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">હોમ</a>
+        <a href="#about">અમારા વિશે</a>
+        <a href="#characters">પાત્રો</a>
+        <a href="#content">કન્ટેન્ટ</a>
+        <a href="#contact">સંપર્ક</a>
+    </nav>
+
+
+    <!-- Home -->
+    <section id="home">
+
+        <div class="home-content">
+
+            <h2>મિર્ઝાપુર</h2>
+
+            <p>
+                શક્તિ, ગુનો, પરિવાર અને દુશ્મનીની દુનિયામાં આપનું સ્વાગત છે.
+            </p>
+
+            <a href="#about" class="btn">
+                વેબસાઇટ જુઓ
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Us -->
+    <section id="about">
+
+        <h2>અમારા વિશે</h2>
+
+        <div class="about-box">
+
+            <p>
+                મિર્ઝાપુર એક લોકપ્રિય ભારતીય ક્રાઇમ થ્રિલર વેબ સિરીઝ છે.
+                આ વાર્તા શક્તિ, પરિવાર, રાજકારણ, ગુનો અને દુશ્મનીની આસપાસ
+                આધારિત છે.
+            </p>
+
+            <br>
+
+            <p>
+                આ વેબસાઇટ મિર્ઝાપુરના પાત્રો, વાર્તા અને કન્ટેન્ટ વિશે
+                માહિતી આપવા માટે બનાવવામાં આવી છે. વેબસાઇટમાં
+                બોલીવુડ સ્ટાઇલની ડિઝાઇનનો ઉપયોગ કરવામાં આવ્યો છે.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Characters -->
+    <section id="characters">
+
+        <h2>મુખ્ય પાત્રો</h2>
+
+        <div class="characters">
+
+            <div class="character">
+                <h3>કાલીન ભૈયા</h3>
+                <p>
+                    મિર્ઝાપુરની દુનિયામાં શક્તિશાળી અને મહત્વપૂર્ણ
+                    પાત્ર.
+                </p>
+            </div>
+
+
+            <div class="character">
+                <h3>ગુડ્ડુ પંડિત</h3>
+                <p>
+                    મહત્વાકાંક્ષા, શક્તિ અને બદલો સાથે જોડાયેલું
+                    મુખ્ય પાત્ર.
+                </p>
+            </div>
+
+
+            <div class="character">
+                <h3>મુન્ના ત્રિપાઠી</h3>
+                <p>
+                    ત્રિપાઠી પરિવારનું મહત્વપૂર્ણ પાત્ર અને
+                    શક્તિની લડાઈનો એક ભાગ.
+                </p>
+            </div>
+
+
+            <div class="character">
+                <h3>ગોલુ ગુપ્તા</h3>
+                <p>
+                    સમજદાર અને મહત્વપૂર્ણ પાત્ર જે વાર્તામાં
+                    મહત્વની ભૂમિકા ભજવે છે.
+                </p>
+            </div>
+
+
+            <div class="character">
+                <h3>બીના ત્રિપાઠી</h3>
+                <p>
+                    ત્રિપાઠી પરિવારનું મહત્વપૂર્ણ અને મજબૂત
+                    પાત્ર.
+                </p>
+            </div>
+
+
+            <div class="character">
+                <h3>બબલુ પંડિત</h3>
+                <p>
+                    ગુડ્ડુ સાથે જોડાયેલું મહત્વપૂર્ણ પાત્ર.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Content -->
+    <section id="content">
+
+        <h2>મિર્ઝાપુર કન્ટેન્ટ</h2>
+
+        <div class="content-box">
+
+            <h3>વાર્તા</h3>
+
+            <p>
+                મિર્ઝાપુરની વાર્તા શક્તિ અને નિયંત્રણ માટેની
+                લડાઈની આસપાસ ફરે છે. અલગ-અલગ પરિવાર અને
+                જૂથો વચ્ચે સંઘર્ષ જોવા મળે છે.
+            </p>
+
+
+            <h3>શક્તિ</h3>
+
+            <p>
+                વાર્તામાં શક્તિ અને પ્રભાવ મુખ્ય વિષયો છે.
+                પાત્રો પોતાના પ્રભાવ અને નિયંત્રણ માટે
+                સતત પ્રયત્ન કરે છે.
+            </p>
+
+
+            <h3>પરિવાર</h3>
+
+            <p>
+                પરિવારના સંબંધો પાત્રોના નિર્ણયો અને
+                સંઘર્ષમાં મહત્વપૂર્ણ ભૂમિકા ભજવે છે.
+            </p>
+
+
+            <h3>દુશ્મની</h3>
+
+            <p>
+                અલગ-અલગ પાત્રો અને પરિવારો વચ્ચેની
+                દુશ્મની વાર્તાને વધુ રસપ્રદ બનાવે છે.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2>અમારો સંપર્ક કરો</h2>
+
+        <form>
+
+            <input
+                type="text"
+                placeholder="તમારું નામ લખો"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="તમારો ઈમેલ લખો"
+                required
+            >
+
+            <input
+                type="text"
+                placeholder="વિષય લખો"
+            >
+
+            <textarea
+                placeholder="તમારો મેસેજ લખો">
+            </textarea>
+
+            <button type="submit">
+                મેસેજ મોકલો
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 મિર્ઝાપુર ફેન વેબસાઇટ | બોલીવુડ થીમ
+        </p>
+
+    </footer>
+
+</body>
+</html>
